@@ -13,17 +13,12 @@ public class Example {
         Thread t2 = new Thread(new Runnable() {
             @Override
             public void run() {
-                for (int i=0;i<=999999999;i++){
-                    if (i==999999999){
-                        c.loopCount(10);
-                    }
-                }
-
+                c.loopCount(10);
             }
         });
 
-        t1.start();
         t2.start();
+        t1.start();
 
 
     }
